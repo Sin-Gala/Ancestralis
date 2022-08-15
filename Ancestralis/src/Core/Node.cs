@@ -9,8 +9,10 @@ namespace Ancestralis
         public List<Node> childrens = new List<Node>();
         public List<MariageDatas> mariages = new List<MariageDatas>();
 
+        public LocalizationDateTime baptism;
         public LocalizationDateTime birth;
         public LocalizationDateTime death;
+        public LocalizationDateTime burial;
 
         public string lastName;
         public string firstName;
@@ -18,11 +20,22 @@ namespace Ancestralis
 
         public string sources;
         public string details;
+
+        public bool foughtInWars;
+        public Gender gender;
     }
 
     public class MariageDatas
     {
         public Node spouse;
         public LocalizationDateTime mariage;
+    }
+
+    public enum Gender
+    {
+        Female = 0,
+        Male = 1,
+        Other = 2,
+        Unknown = 3
     }
 }
